@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
-from spell_checker import correct_spelling, suggest_alternatives
+from spelling_correction import correct_spelling, suggest_alternatives
 
 app = FastAPI()
 
