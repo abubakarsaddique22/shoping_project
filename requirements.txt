@@ -1,6 +1,5 @@
 fastapi
 uvicorn[standard]
-uvicorn
 pydantic
 typing-extensions
 rapidfuzz
