@@ -4,3 +4,4 @@ uvicorn
 pydantic
 typing-extensions
 rapidfuzz
+python-multipart
