@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from fastapi.middleware.cors import CORSMiddleware
 from spelling_correction import correct_spelling, suggest_alternatives
+import uvicorn
 
 app = FastAPI()
 
@@ -129,8 +130,6 @@ def finalize_list(data: Optional[FinalList] = None):
     return {"status": "success", "message": f"Finalized list with {len(final_items)} items"}
 
 import os 
-if __name__ == '__main__':
-    # Get port from environment variable or default to 5000
-    port = int(os.environ.get('PORT', 5000))
-    # IMPORTANT: Must bind to 0.0.0.0, not localhost
-    app.run(host='0.0.0.0', port=port, debug=False)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
