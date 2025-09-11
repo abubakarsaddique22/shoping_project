@@ -45,7 +45,7 @@ async def read_file(file: UploadFile) -> List[str]:
 
 @app.get("/")
 def home():
-    return {"message": "API is running. Go to /docs to test endpoints."}
+    return {"message": "API is running."}
 
 
 # === Endpoint: Process list (file + manual text) ===
