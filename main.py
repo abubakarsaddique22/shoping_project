@@ -127,3 +127,10 @@ def finalize_list(data: Optional[FinalList] = None):
     # Save to DB
     DB["final"].append(final_items)
     return {"status": "success", "message": f"Finalized list with {len(final_items)} items"}
+
+
+if __name__ == '__main__':
+    # Get port from environment variable or default to 5000
+    port = int(os.environ.get('PORT', 5000))
+    # IMPORTANT: Must bind to 0.0.0.0, not localhost
+    app.run(host='0.0.0.0', port=port, debug=False)
