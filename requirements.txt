@@ -5,3 +5,5 @@ pydantic_core==2.33.2
 starlette==0.47.2
 python-multipart==0.0.20   # for file uploads
 typing_extensions==4.14.1  # for type hints
+uvicorn==0.35.0
+RapidFuzz==3.13.0
